@@ -15,14 +15,7 @@ class GameWindow(arcade.Window):
 
     def setup(self):
         self.level = read_tmx("level.tmx")
-
-    def setup(self):
-        # ...
-
         self.physics_engine = PhysicsEngineSimple(self.player_sprite, self.level["Platforms"])
-    
-    def setup(self):
-        # ...
         self.player_sprite = Player("path/to/player/image.png", 1)
         self.physics_engine = PhysicsEngineSimple(self.player_sprite, self.level["Platforms"])
 
