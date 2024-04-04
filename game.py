@@ -1,5 +1,5 @@
-
 import arcade
+from arcade.tilemap import read_tmx
 
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
@@ -11,6 +11,14 @@ class GameWindow(arcade.Window):
 
     def on_draw(self):
         arcade.start_render()
+    
+
+class GameWindow(arcade.Window):
+    # ...
+
+    def setup(self):
+        self.level = read_tmx("level.tmx")
+
 
 if __name__ == "__main__":
     window = GameWindow()
