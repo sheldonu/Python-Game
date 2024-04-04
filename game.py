@@ -28,7 +28,7 @@ class GameWindow(arcade.Window):
     def setup(self):
         # ...
 
-self.physics_engine = PhysicsEngineSimple(self.player_sprite, self.level["Platforms"])
+        self.physics_engine = PhysicsEngineSimple(self.player_sprite, self.level["Platforms"])
 
 
 class Player(arcade.Sprite):
@@ -38,6 +38,15 @@ class Player(arcade.Sprite):
     def update(self):
         # Update player movement and animations here
         pass
+
+
+class GameWindow(arcade.Window):
+    # ...
+
+    def setup(self):
+        # ...
+        self.player_sprite = Player("path/to/player/image.png", 1)
+        self.physics_engine = PhysicsEngineSimple(self.player_sprite, self.level["Platforms"])
 
 
 
