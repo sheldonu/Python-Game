@@ -49,6 +49,24 @@ class GameWindow(arcade.Window):
         self.physics_engine = PhysicsEngineSimple(self.player_sprite, self.level["Platforms"])
 
 
+class GameWindow(arcade.Window):
+    # ...
+
+    def on_key_press(self, key, modifiers):
+        if key == arcade.key.LEFT:
+            self.player_sprite.change_x = -5
+        elif key == arcade.key.RIGHT:
+            self.player_sprite.change_x = 5
+        elif key == arcade.key.UP:
+            self.player_sprite.change_y = 5
+
+    def on_key_release(self, key, modifiers):
+        if key in (arcade.key.LEFT, arcade.key.RIGHT):
+            self.player_sprite.change_x = 0
+        elif key == arcade.key.UP:
+            self.player_sprite.change_y = 0
+
+
 
 
 if __name__ == "__main__":
