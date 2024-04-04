@@ -10,16 +10,15 @@ SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 650
 
 # Constants used to scale our sprites from their original size
-CHARACTER_SCALING = 1
-TILE_SCALING = 0.5
-COIN_SCALING = 0.5
-SPRITE_PIXEL_SIZE = 128
+CHARACTER_SCALING = .5
+TILE_SCALING = 1
+SPRITE_PIXEL_SIZE = 50
 GRID_PIXEL_SIZE = SPRITE_PIXEL_SIZE * TILE_SCALING
 
 # Movement speed of player, in pixels per frame
-PLAYER_MOVEMENT_SPEED = 10
+PLAYER_MOVEMENT_SPEED = 5
 GRAVITY = 1
-PLAYER_JUMP_SPEED = 20
+PLAYER_JUMP_SPEED = 15
 
 
 class MyGame(arcade.Window):
@@ -92,7 +91,7 @@ class MyGame(arcade.Window):
         self.score = 0
 
         # Set up the player, specifically placing it at these coordinates.
-        src = ":resources:images/animated_characters/female_adventurer/femaleAdventurer_idle.png"
+        src = "./images/player.png"
         self.player_sprite = arcade.Sprite(src, CHARACTER_SCALING)
         self.player_sprite.center_x = 128
         self.player_sprite.center_y = 128
