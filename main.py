@@ -10,7 +10,7 @@ SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 650
 
 # Constants used to scale our sprites from their original size
-CHARACTER_SCALING = .5
+CHARACTER_SCALING = .2
 TILE_SCALING = 1
 SPRITE_PIXEL_SIZE = 50
 GRID_PIXEL_SIZE = SPRITE_PIXEL_SIZE * TILE_SCALING
@@ -91,7 +91,7 @@ class MyGame(arcade.Window):
         self.score = 0
 
         # Set up the player, specifically placing it at these coordinates.
-        src = "./images/player.png"
+        src = ":resources:images/alien/alienBlue_jump.png"
         self.player_sprite = arcade.Sprite(src, CHARACTER_SCALING)
         self.player_sprite.center_x = 128
         self.player_sprite.center_y = 128
