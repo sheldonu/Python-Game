@@ -2,7 +2,7 @@
 
 This is a python game framework that is mainly called a platformer game. The player has control over the a character by using the buttons to move or jump around the map. The objective of the game is for the character to collect as many coins as he can before the timer runs out. Once he collects a coin, another coin will spawn in a random location. The purpose in writing this software is to gain a better knowledge on how to use the arcade library in python, and to give others a fun experience to enjoy.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Python Platformer Demo](https://youtu.be/v-kVzFtLk4o)
 
 # Development Environment
 
